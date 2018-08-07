@@ -13,7 +13,15 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 
 		<?php
-		// Start the loop.
+		// Start the loop.<nav class="nav-single">
+ <span class="nav-previous">
+ <?php previous_post_link( '%link', '<span class="meta-nav">' . _x( '&larr; PREVIOUS', 'Previous post link', '' ) . '</span> %title' ); ?>
+ </span>
+ <span class="nav-next">
+ <?php next_post_link( '%link', '<span class="meta-nav">' . _x( 'NEXT &rarr;', 'Next post link', '' ) . '</span> %title' ); ?>
+ </span>
+ </nav><!-- .nav-single -->
+
 		while ( have_posts() ) :
 			the_post();
 
